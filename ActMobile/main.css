@@ -1,0 +1,595 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background: #151515;
+  color: #fff;
+  position: relative;
+}
+body > #closeBtn {
+  display: none;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  z-index: 1;
+  background: #f8c146;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.message {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  left: 30px;
+  background: #f8c146;
+  color: #000;
+  padding: 50px 30px;
+  border-radius: 0 0 40px 40px;
+  z-index: 0;
+}
+.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+.colorInput {
+  padding: 30px 20px;
+  border-radius: 10px;
+  background: #f8c146;
+  right: 10px;
+  position: fixed;
+  bottom: 20px;
+}
+.colorInput input {
+  border: none;
+  padding: 5px 15px;
+}
+main {
+  margin: 2% 7%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin: 2% 7%;
+  justify-content: space-between;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav a {
+  margin: 0 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+nav a:hover {
+  color: #f8c146;
+}
+.logo {
+  width: 50px;
+}
+header {
+  margin: 2% 7%;
+  margin-top: 180px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.leftContainer {
+  padding: 20px;
+  margin-right: 20px;
+  width: 60%;
+}
+
+header h1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+header img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+span {
+  font-weight: 500;
+  color: #f8c146;
+}
+.knowMore {
+  padding: 10px 15px;
+  position: absolute;
+  margin-top: 50px;
+  border-radius: 5px;
+  background: #f8c146;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  border: solid 2px transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+.knowMore:hover {
+  color: #fff;
+  background: #151515;
+  border: 1px solid #f8c146;
+  font-weight: 500;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  align-items: center;
+  margin: 100px 20px;
+  padding: 50px 20px;
+  padding-top: 150px;
+  height: auto;
+}
+.aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.aboutUs img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+.aboutUs h2 {
+  font-size: 1.8rem;
+}
+.aboutUs p {
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.aboutRightCon,
+.aboutleftCon {
+  width: 50%;
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.featureLeft,
+.featureRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.container p {
+  width: 50%;
+}
+.container img {
+  width: 100%;
+  max-width: 90px;
+  margin: 20px;
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+}
+.reviews {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+}
+.reviewCon {
+  border: 1px solid #f8c146;
+  padding: 30px;
+  border-radius: 20px 60px;
+  width: 30%;
+}
+.reviewCon h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.reviewCon p {
+  font-size: 0.9rem;
+}
+.contactUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactInfo {
+  width: 50%;
+  margin-top: 100px;
+}
+.contactInfo h3 {
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1;
+}
+.contactInfo p {
+  margin-top: 10px;
+}
+.contactInfo a {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #f8c146;
+}
+.contactUs img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+footer {
+  margin: 10px 0;
+  padding: 50px;
+  background: #fff;
+  color: #000;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer h1 {
+  font-size: 1.8rem;
+  color: #f8c146;
+  text-shadow: 1px 1px #000;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerLogo a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px;
+}
+.footerLogo a i {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+.footerSupport p {
+  font-size: 1.2rem;
+}
+.footerSupport li,
+.footerSupport a {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+.footerSupport a {
+  color: #212121;
+  font-size: 0.9rem;
+}
+.footerSupport a:hover {
+  color: #f8c146;
+}
+.hamburgerMenu {
+  padding: 5px 10px;
+  background: #151515;
+  border: none;
+  color: #f8c146;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  display: none;
+}
+@media only screen and (max-width: 770px) {
+  nav a {
+    margin: 0 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  header {
+    margin: 2% 7%;
+    margin-top: 120px;
+  }
+  header h1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  header h2 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  header img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+  .knowMore {
+    padding: 8px 10px;
+    position: absolute;
+    margin-top: 30px;
+    border-radius: 5px;
+    background: #f8c146;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    border: solid 2px transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+  br {
+    display: none;
+  }
+  .aboutUs {
+    text-align: left;
+  }
+  .aboutRightCon {
+    margin-left: 30px;
+  }
+  .aboutUs h2 {
+    font-size: 1.5rem;
+  }
+  .aboutUs p {
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .featureLeft,
+  .featureRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container img {
+    width: 30%;
+  }
+  .container p {
+    font-size: 0.65rem;
+    padding: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    max-width: 150px;
+  }
+  .reviewCon {
+    border: 1px solid #f8c146;
+    padding: 20px;
+    border-radius: 20px 60px;
+    width: 50%;
+    margin: 0 20px;
+  }
+  .reviewCon h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .reviewCon p {
+    font-size: 0.7rem;
+  }
+  .contactInfo h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .contactInfo p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  .contactInfo a {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #f8c146;
+  }
+  .contactUs img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-left: 20px;
+  }
+  footer {
+    margin: 10px 0;
+    padding: 30px;
+    background: #fff;
+    color: #000;
+  }
+  footer h1 {
+    font-size: 1.5rem;
+    color: #f8c146;
+    text-shadow: 1px 1px #000;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .footerSupport p {
+    font-size: 1rem;
+  }
+  .footerSupport a {
+    color: #212121;
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 670px) {
+  body {
+    width: 100vh;
+  }
+  .logo {
+    width: 40px;
+  }
+  nav a {
+    margin: 0 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  nav {
+    margin-top: 20px;
+  }
+
+  .leftContainer {
+    padding: 20px;
+    margin-right: 20px;
+    width: 50%;
+  }
+  header img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+  header h2 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+    margin: 50px 20px;
+    padding: 50px 20px;
+    padding-top: 150px;
+    height: auto;
+  }
+  .aboutUs img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+  .aboutUs h2 {
+    font-size: 1.3rem;
+  }
+  .aboutUs p {
+    font-size: 0.9rem;
+  }
+  .features {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .featureLeft,
+  .featureRight {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .container p {
+    font-size: 0.8rem;
+  }
+  .container img {
+    width: 100%;
+    max-width: 90px;
+  }
+
+  .contactInfo {
+    width: 50%;
+    margin-top: 100px;
+  }
+  .contactInfo h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .contactInfo p {
+    margin-top: 10px;
+  }
+  .contactInfo a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #f8c146;
+  }
+  .contactUs img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  footer {
+    margin: 10px 0;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+  }
+  .footerContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  footer h1 {
+    font-size: 1.8rem;
+    color: #f8c146;
+    text-shadow: 1px 1px #000;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .footerLogo {
+    display: inline-block;
+  }
+  .footerLogo a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+  }
+  .footerLogo a i {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  .footerSupport {
+    margin-top: 10px;
+  }
+  .footerSupport p {
+    font-size: 1.2rem;
+  }
+  .footerSupport p {
+    text-align: center;
+  }
+  .footerSupport ul {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .footerSupport li {
+    padding: 5px 20px;
+  }
+  .footerSupport a {
+    color: #212121;
+    font-size: 0.9rem;
+  }
+}
